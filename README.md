@@ -9,27 +9,26 @@ Serenity BDD is a library that makes it easier to write high quality automated a
 First of all, you need to clone project to your local repository.
 
 To run the all of the tests at once, you can simply type in Terminal:
-
+```java
 mvn verify
-
+```
 If you are getting error: 
 
+```
 "The term 'mvn' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again."
+```
 
-you can run the tests from IntelliJ by clicking on: Run -> Run Maven Goal -> Verify
+you can run the tests from IntelliJ by clicking on: `Run -> Run Maven Goal -> Verify`
 
-To run tests separately, in IntelliJ navigate to folder:
+To run tests separately, in IntelliJ navigate to folder: `src/test/java/testcases`
 
-src/test/java/testcases
-
-and right-click on any of the tests you want to run, and click on: Run '$TESTNAME'
+and right-click on any of the tests you want to run, and click on: `Run '$TESTNAME'`
 
 ## Generating the reports
 
-Since the Serenity reports contain aggregate information about all of the tests, they are not generated after each individual test (as this would be extremenly inefficient). They reports are also integrated into the Maven build process: the following code in the pom.xml file causes the reports to be generated automatically once all the tests have completed when you run:
+Since the Serenity reports contain aggregate information about all of the tests, they are not generated after each individual test (as this would be extremenly inefficient). They reports are also integrated into the Maven build process: the following code in the pom.xml file causes the reports to be generated automatically once all the tests have completed when you run `mvn verify`
 
-mvn verify
-
+```json
 <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
@@ -47,8 +46,6 @@ mvn verify
                     </execution>
                 </executions>
             </plugin>
+```
             
-            
-When all tests are completed, a new folder "target" will be generated. You can check for all test results and reports by opening file:
-
-target/site/index.html
+When all tests are completed, a new folder `target` will be generated. You can check for all test results and reports by opening file `target/site/index.html`
