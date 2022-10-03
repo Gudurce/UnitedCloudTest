@@ -29,7 +29,7 @@ and right-click on any of the tests you want to run, and click on: `Run '$TESTNA
 Since the Serenity reports contain aggregate information about all of the tests, they are not generated after each individual test (as this would be extremenly inefficient). They reports are also integrated into the Maven build process: the following code in the pom.xml file causes the reports to be generated automatically once all the tests have completed when you run `mvn verify`
 
 ```xml
-<plugin>
+             <plugin>
                 <groupId>net.serenity-bdd.maven.plugins</groupId>
                 <artifactId>serenity-maven-plugin</artifactId>
                 <version>${serenity.maven.version}</version>
