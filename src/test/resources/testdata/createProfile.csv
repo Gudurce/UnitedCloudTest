@@ -1,0 +1,7 @@
+profileName,age,birthYear,passed,url
+Profile A,0-6,,true,login
+,0-6,2000,false,create-profile
+Profile B,,,false,create-profile
+Profile C,18_PLUS,,false,create-profile
+Profile D,18_PLUS,100,false,create-profile
+Profile E,18_PLUS,2005,false,create-profile
